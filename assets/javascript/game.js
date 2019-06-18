@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    // random number generated is between 19-120
     var Generated = Math.floor(Math.random()*101+19)
     $('#randomNumber').html(Generated);
 
@@ -10,5 +11,5 @@ $(document).ready(function(){
     var PlayerTotal = 0;
     var wins = 0;
     var losses = 0;
-    
+
 })
