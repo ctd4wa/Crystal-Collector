@@ -15,6 +15,8 @@ $(document).ready(function(){
 
     //  add gem scores for each click on the gems
     //  append the values to each other to generate the player total
+    //  if statement: if the Player score === randomNumber, win++
+    //  if Player score > randomNumber, lose++
     //  reset the random number and each individual gem values
 
 })
