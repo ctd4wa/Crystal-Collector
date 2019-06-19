@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     $('#Wins').text(wins);
     $('#Losses').text(losses);
-    $('UserTotal').text(PlayerTotal);
+    $('#UserTotal').text(PlayerTotal);
 
     function reset(){
         Generated = Math.floor(Math.random()*101+19);
@@ -26,7 +26,7 @@ $(document).ready(function(){
         blue = Math.floor(Math.random()*11+1);
         green = Math.floor(Math.random()*11+1);
         PlayerTotal = 0;
-        $('UserTotal').text(PlayerTotal);
+        $('#UserTotal').text(PlayerTotal);
     }
 
     function winner(){
@@ -46,7 +46,7 @@ $(document).ready(function(){
     $('#Sun').on('click',function(){
         PlayerTotal = PlayerTotal + red;
         console.log("New UserTotal = " + PlayerTotal);
-        $('UserTotal').text(PlayerTotal);
+        $('#UserTotal').text(PlayerTotal);
             if (PlayerTotal == Generated) {
                 winner();
             }
@@ -58,7 +58,7 @@ $(document).ready(function(){
     $('#Fire').on('click',function(){
         PlayerTotal = PlayerTotal + orange;
         console.log("New UserTotal = " + PlayerTotal);
-        $('UserTotal').text(PlayerTotal);
+        $('#UserTotal').text(PlayerTotal);
             if (PlayerTotal == Generated) {
                 winner();
             }
@@ -70,7 +70,7 @@ $(document).ready(function(){
     $('#Water').on('click',function(){
         PlayerTotal = PlayerTotal + blue;
         console.log("New UserTotal = " + PlayerTotal);
-        $('UserTotal').text(PlayerTotal);
+        $('#UserTotal').text(PlayerTotal);
             if (PlayerTotal == Generated) {
                 winner();
             }
@@ -82,7 +82,7 @@ $(document).ready(function(){
     $('#Thunder').on('click',function(){
         PlayerTotal = PlayerTotal + green;
         console.log("New UserTotal = " + PlayerTotal);
-        $('UserTotal').text(PlayerTotal);
+        $('#UserTotal').text(PlayerTotal);
             if (PlayerTotal == Generated) {
                 winner();
             }
