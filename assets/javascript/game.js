@@ -1,13 +1,13 @@
 $(document).ready(function(){
     // random number generated is between 19-120
-    var Generated = Math.floor(Math.random()*101+19)
+    var Generated = Math.floor(Math.random()*101+19);
     $('#randomNumber').html(Generated);
 
     // numbers randomly generated between 1-12 for each gem
-    var red = Math.floor(Math.random()*11+1);
-    var orange = Math.floor(Math.random()*11+1);
-    var blue = Math.floor(Math.random()*11+1);
-    var green = Math.floor(Math.random()*11+1);
+    var red = Math.floor(Math.random()*12)+1;
+    var orange = Math.floor(Math.random()*12)+1;
+    var blue = Math.floor(Math.random()*12)+1;
+    var green = Math.floor(Math.random()*12)+1;
 
     var PlayerTotal = 0;
     var wins = 0;
@@ -17,18 +17,20 @@ $(document).ready(function(){
     $('#Losses').text(losses);
     $('#UserTotal').text(PlayerTotal);
 
+    //  reset the random number and each individual gem values
     function reset(){
-        Generated = Math.floor(Math.random()*101+19);
+        Generated = Math.floor(Math.random()*101)+1;
         console.log(Generated)
         $('#randomNumber').text(Generated);
-        red = Math.floor(Math.random()*11+1);
-        orange = Math.floor(Math.random()*11+1);
-        blue = Math.floor(Math.random()*11+1);
-        green = Math.floor(Math.random()*11+1);
+        red = Math.floor(Math.random()*12)+1;
+        orange = Math.floor(Math.random()*12)+1;
+        blue = Math.floor(Math.random()*12)+1;
+        green = Math.floor(Math.random()*12)+1;
         PlayerTotal = 0;
         $('#UserTotal').text(PlayerTotal);
     }
 
+    //  if statement: if the Player score === randomNumber, win++
     function winner(){
         alert("Well done!");
         wins++;
@@ -36,14 +38,16 @@ $(document).ready(function(){
         reset();
     }
 
+    //  if Player score > randomNumber, lose++
     function loser(){
         alert("Oh no!");
         losses++;
         $('#Losses').text(losses);
         reset()
     }
-
+    //  add gem scores for each click on the gems
     $('#Sun').on('click',function(){
+    //  append the values to each other to generate the player total
         PlayerTotal = PlayerTotal + red;
         console.log("New UserTotal = " + PlayerTotal);
         $('#UserTotal').text(PlayerTotal);
@@ -90,10 +94,4 @@ $(document).ready(function(){
                 loser();
             }
     });
-    //  add gem scores for each click on the gems
-    //  append the values to each other to generate the player total
-    //  if statement: if the Player score === randomNumber, win++
-    //  if Player score > randomNumber, lose++
-    //  reset the random number and each individual gem values
-
 })
