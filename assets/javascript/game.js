@@ -19,7 +19,7 @@ $(document).ready(function(){
 
     //  reset the random number and each individual gem values
     function reset(){
-        Generated = Math.floor(Math.random()*101)+1;
+        Generated = Math.floor(Math.random()*101+19);
         console.log(Generated)
         $('#randomNumber').text(Generated);
         red = Math.floor(Math.random()*12)+1;
