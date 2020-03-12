@@ -1,9 +1,31 @@
-* {
+h1 {
     text-align: center;
+    color: white;
 }
 
 .jumbotron {
-    height: 50px;
+    padding: 5px 5px 5px 5px;
+    background-color: #014bb1;
+}
+
+.rulesTitle {
+    text-align: center;
+}
+
+.rules {
+    text-align: left;
+}
+
+.numberToMatch {
+    text-align: center;
+}
+
+.records {
+    text-align: center;
+}
+
+.crystals {
+    text-align: center;
 }
 
 .CrystalPic {
